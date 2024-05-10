@@ -23,7 +23,9 @@ header h1 {
 section {
   padding: 20px;
   margin: 20px 0;
+  
 }
+
 
 h2 {
   border-bottom: 2px solid #A4C639; 
@@ -214,7 +216,6 @@ i {
 
 .testimonials-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -230,17 +231,12 @@ i {
 
 .testimonials-container {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start; 
   padding: 20px;
 }
 
 .testimonial-text, .testimonial-image {
   flex: 1; 
-}
-
-.testimonial-image {
-  margin-right: 20px; 
 }
 
 .testimonial-image img {
@@ -250,6 +246,58 @@ i {
   border-radius: 10px; 
 }
 
+@media (max-width: 730px) {
+  .centratura{
+    padding: 0 5.5% 0 5.5%;
+  }
+}
+
+@media (max-width: 670px) {
+  .centratura{
+    padding: 0 6% 0 6%;
+  }
+}
+
+@media (max-width: 625px) {
+  .centratura{
+    padding: 0 7% 0 7%;
+  }
+}
+
+@media (max-width: 570px) {
+  .centratura{
+    padding: 0 7.5% 0 7.5%;
+  }
+}
+
+@media (max-width: 515px) {
+  .centratura{
+    padding: 0 8% 0 8%;
+  }
+}
+
+@media (max-width: 470px) {
+  .centratura{
+    padding: 0 9% 0 9%;
+  }
+}
+@media (max-width: 450px) {
+  .centratura{
+    padding: 0 9.5% 0 9.5%;
+  }
+}
+
+@media (max-width: 430px) {
+  .centratura{
+    padding: 0 10% 0 10%;
+  }
+}
+
+@media (max-width: 430px) {
+  .centratura{
+    padding: 0 11% 0 11%;
+  }
+}
 
 @media (max-width: 768px) {
   .testimonials-container {
@@ -371,3 +419,180 @@ h1:hover, .sidebar a:hover {
   margin:  0; 
 }
 
+#foto-profilo{
+  max-height: 100vh;
+  max-width: 100%; 
+  width: auto; 
+}
+
+#foto-profilo {
+  width: 350px;
+  border-radius: 10px;
+  margin-right: 20px; 
+  margin-bottom: 10px;
+  float: left; 
+}
+
+
+.testimonial-text {
+  padding: 20px;
+}
+
+
+@media (min-width: 573px) and (max-width: 725px) {
+  #foto-profilo {
+      width: 100%; 
+      float: none; 
+      display: block; 
+      margin-right: 0; 
+      margin-bottom: 20px; 
+  }
+
+  .testimonial-text {
+      text-align: center; 
+  }
+}
+
+@media (max-width: 695px) {
+  .testimonial-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #about,
+  #contact{
+    text-align: center;
+  }
+
+  #contact > h2,
+  #portfolio > h2,
+  #about > h2,
+  #testimonials > div > div > h2 {
+    text-align: left;
+  }
+
+  #foto-profilo {
+    width: 80%; 
+    float: none; 
+    display: block; 
+    margin-bottom: 10px; 
+  }
+}
+
+@media (max-width: 690px) {
+  .testimonial-text{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 572px) {
+  #foto-profilo {
+      width: 100%; 
+      float: none;
+      margin-right: 0;
+      margin-bottom: 20px;
+  }
+
+  .testimonial-text {
+      text-align: center;
+  }
+}
+
+@media (min-width: 539px) and (max-width: 694px) {
+  .foto-centrata{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+  a.p-right,
+  a.p-left
+  {
+      display: inline-block; 
+      background: #A4C639;    
+      color: rgb(0, 0, 0);           
+      padding: 10px;          
+      border-radius: 5px;     
+      margin: 10px 0;        
+      text-decoration: none;  
+  }
+
+ 
+  .p-btn{
+    display: inline-block; 
+    background: #A4C639; 
+    color: rgb(0, 0, 0);
+    padding: 8px 13px; 
+    border-radius: 5px; 
+    margin-right: 0.5%;
+  }
+
+  a.p-right:hover,
+  a.p-left:hover,
+  .p-btn:hover {
+      color: white;
+      transform: scale(1.2);
+      transition: transform 0.3s ease;
+  }
+ 
+  p.p-right,
+  a.p-right{
+    margin-left: 5%;
+  }
+
+  .marg{
+    margin-left: 2%;
+  }
+
+  @media (max-width: 800px) {
+    body{
+      font-size: 12px;
+    }
+
+    .p-btn{
+      padding: 5px 9px; 
+      border-radius: 5px; 
+    }
+  
+    a.p-right,
+    a.p-left
+    {        
+        padding: 7px;         
+        margin: 7px 0;      
+    }
+    
+
+    .portfolio-item,
+    #portfolio > div.portfolio-item.portfolio-item-right.active{
+      display: flex;
+      flex-direction: column;
+    }
+
+    .portfolio-content,
+    #portfolio > div:nth-child(2) > div,
+    #portfolio > div:nth-child(4) > div{
+      max-width: 80%;
+    }
+
+    #portfolio > div:nth-child(2) > img,
+    #portfolio > div:nth-child(3) > img,
+    #portfolio > div:nth-child(4) > img,
+    #portfolio > div:nth-child(5) > img{
+      max-width: 80%;
+      height: auto;
+    }
+  }
+
+  @media (min-width: 480px) and (max-width: 800px) {
+    .primo-br{
+      display: none;
+    }
+
+    p.p-right,
+    a.p-right{
+      margin-left: 0;
+    }
+
+  }
