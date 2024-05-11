@@ -576,15 +576,26 @@ h1:hover, .sidebar a:hover {
       max-width: 80%;
     }
 
-    #portfolio > div:nth-child(2) > img,
-    #portfolio > div:nth-child(3) > img,
-    #portfolio > div:nth-child(4) > img,
-    #portfolio > div:nth-child(5) > img{
-      max-width: 80%;
-    max-height: 70vh;  /* Imposta un'altezza massima */
-    height: auto;
-    object-fit: contain;  /* Mantiene le proporzioni dell'immagine */
+    .portfolio-item img {
+      width: 100%;  /* si assicura che l'immagine si adatti alla larghezza del contenitore */
+      height: auto; /* mantiene l'altezza proporzionale alla nuova larghezza */
+      max-height: 100%; /* impedisce all'immagine di diventare più alta del suo contenitore */
+      object-fit: contain; /* mantiene le proporzioni dell'immagine, assicurando che sia completamente visibile */
     }
+    
+
+    @media (max-width: 800px) {
+      #portfolio > div:nth-child(2) > img,
+      #portfolio > div:nth-child(3) > img,
+      #portfolio > div:nth-child(4) > img,
+      #portfolio > div:nth-child(5) > img {
+        width: 100%;
+        height: auto;
+        max-height: 100%;
+        object-fit: contain;
+      }
+    }
+    
   }
 
   @media (min-width: 480px) and (max-width: 800px) {
