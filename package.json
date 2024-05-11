@@ -1,18 +1,27 @@
 {
   "devDependencies": {
     "autoprefixer": "^10.4.19",
+    "nodemon": "^3.1.0",
     "postcss": "^8.4.38",
     "postcss-cli": "^11.0.0"
   },
   "scripts": {
-    "build-css": "postcss style.css --use autoprefixer -o styled.css"
+    "build-css": "postcss style.css --use autoprefixer -o styled.css",
+    "watch-css": "nodemon --watch style.css --exec \"npm run build-css\""
   },
   "browserslist": [
     "> 0.5%",
     "last 2 versions",
     "not dead",
+    "Firefox ESR",
+    "Edge >= 12",
     "Safari >= 8",
     "iOS >= 8",
+    "Chrome >= 30",
+    "Firefox >= 30",
+    "Samsung >= 5",
+    "Opera >= 20",
+    "Android >= 4.4",
     "IE 10"
-  ]  
+  ]
 }
