@@ -1,0 +1,36 @@
+1) Installazione dei pacchetti NPM necessari:
+
+A) autoprefixer: Aggiunge i prefissi specifici del browser al tuo CSS.
+B) postcss: Un tool per trasformare il CSS con i plugin JavaScript.
+C) postcss-cli: Fornisce una interfaccia a riga di comando per postcss.
+D) nodemon: Monitora i cambiamenti nei file del tuo progetto e riavvia automaticamente il server.
+
+# Installazione dei pacchetti NPM
+npm install autoprefixer postcss postcss-cli nodemon --save-dev
+
+# Aggiungi questo al tuo package.json sotto la sezione "scripts"
+"build-css": "postcss style.css --use autoprefixer -o styled.css",
+"watch-css": "nodemon --watch style.css --exec 'npm run build-css'"
+
+# Aggiungi questo al tuo package.json sotto la sezione "browserslist"
+"browserslist": [
+  "> 0.5%",
+  "last 2 versions",
+  "not dead",
+  "Firefox ESR",
+  "Edge >= 12",
+  "Safari >= 8",
+  "iOS >= 8",
+  "Chrome >= 30",
+  "Firefox >= 30",
+  "Samsung >= 5",
+  "Opera >= 20",
+  "Android >= 4.4",
+  "IE 10"
+]
+
+# Modifica il link nel tuo HTML per utilizzare il CSS processato
+<link rel="stylesheet" href="styled.css">
+
+# Avvia il monitoraggio ogni volta che apri per la prima volta il lavoro con
+npm run watch-css
