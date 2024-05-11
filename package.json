@@ -1,0 +1,18 @@
+{
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "postcss-cli": "^11.0.0"
+  },
+  "scripts": {
+    "build-css": "postcss style.css --use autoprefixer -o styled.css"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "not dead",
+    "Safari >= 8",
+    "iOS >= 8",
+    "IE 10"
+  ]  
+}
